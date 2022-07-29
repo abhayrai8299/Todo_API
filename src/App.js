@@ -11,7 +11,7 @@ function App() {
   const [temp,setTemp]=useState("")
 
 
-  const fetchProducts = async () => {
+  const fetchTodo = async () => {
     const response = await axios
       .get("https://62e010f4fa8ed271c47dc10e.mockapi.io/task")
       .catch((e) => {
@@ -20,10 +20,8 @@ function App() {
     settodos(response.data);
   };
   useEffect(() => {
-    fetchProducts();
+    fetchTodo();
   },[]);
-
-
   //  console.log(todos);
   return (
     <div className="App">

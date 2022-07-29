@@ -6,7 +6,7 @@ const TodoList = ({ todos, settodos, settext,setisEditItem,setactive,setTemp,tex
     <div>
       <ul>
         {todos.map((item) => (
-          <Todo
+          <Todo                                 // List of Item
             setisEditItem={setisEditItem}
             settext={settext}
             settodos={settodos}

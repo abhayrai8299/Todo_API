@@ -9,23 +9,25 @@ const Todo = ({
   setTemp,
   text
 }) => {
-
+   
     console.log(text);
-  const deleteHandler = () => {
+  const deleteHandler = () => {              //Delete Handler
     if(text!=="")
     {
         settodos(todos.filter((element) => element.id !== item.id));
         settext("")
-        setTemp("")
+        setTemp(" ")
         setactive(false)
+        setisEditItem(null)
     }
     else
     {
         settodos(todos.filter((element) => element.id !== item.id));
+        setactive(false);
     }
  
   };
-  const editItem = (id) => {
+  const editItem = (id) => {                   //Getting item which user click on edit and pass the id in the edititem state
     setactive(true)
     let item = todos.find((task) => {
       return task.id === id;

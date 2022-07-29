@@ -16,6 +16,9 @@ li
 {
   list-style: none;
 }
+.cancel{
+  cursor: pointer;
+}
 
 .App-header {
   background-color: #282c34;
